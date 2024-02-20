@@ -9,6 +9,7 @@ import {
 import Aboutus from './loginss/Aboutus';
 import Doctor from './loginss/Doctor';
 import Loginpage from './loginss/Loginpage';
+import Registerpage from './loginss/Registerpage';
 
 
 const router = createBrowserRouter([
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
   {
     path: "/loginpage",
     element: <div><Loginpage /> </div>,
+  },
+  {
+    path: "/registerpage",
+    element: <div><Registerpage /> </div>,
   },
 ]);
 
