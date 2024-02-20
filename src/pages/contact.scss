@@ -1,0 +1,69 @@
+.contact {
+    display: flex;
+    background-color: white;
+  
+    .left {
+      flex: 0.33;
+      overflow: hidden;
+  
+      .wrapper {
+        padding: 20px;
+  
+        p {
+          font-size: 14px;
+          line-height: 1.5;
+          margin-bottom: 10px;
+  
+          strong {
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  
+    .middle {
+      flex: 0.33;
+      overflow: hidden;
+  
+      .wrapper {
+        padding: 20px;
+  
+        p {
+          font-size: 14px;
+          line-height: 1.5;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  
+    .right {
+      flex: 0.33;
+      overflow: hidden;
+  
+      .wrapper {
+        padding: 20px;
+  
+        p {
+          font-size: 14px;
+          line-height: 1.5;
+          margin-bottom: 10px;
+        }
+  
+        .social-icons {
+          display: flex;
+          a {
+            margin-right: 40px;
+            text-decoration: none;
+            color: #010525;
+            transition: color 0.3s ease;
+            
+  
+            &:hover {
+              color: #b58904; // Change to your desired hover color
+            }
+          }
+        }
+      }
+    }
+  }
+  

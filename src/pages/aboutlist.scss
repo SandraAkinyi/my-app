@@ -1,0 +1,15 @@
+.aboutlist{
+    font-size: 19px;
+    margin-right: 50px;
+    padding: 0.7;
+    cursor: pointer;
+    
+
+    &.active{
+        
+        color: #f98f05;
+        text-decoration: underline;
+
+
+    }
+}

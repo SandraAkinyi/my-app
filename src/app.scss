@@ -1,0 +1,19 @@
+.app {
+  height: 100vh;
+  scroll-snap-type: y mandatory;
+  scroll-snap-align: start ;
+
+  .sections {
+    width: 100%;
+    height: calc(100vh - 70px); /* Adjusted height to consider the .topbar height */
+    background-color: lightsalmon;
+    position: relative;
+    top: 70px; /* Adjusted top position to start below the .topbar */
+  }
+
+  > * {
+    width: 219vh;
+    height: 70px;
+    /* Add any additional styling for direct children of .app here */
+  }
+}
