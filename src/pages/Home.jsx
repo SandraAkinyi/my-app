@@ -33,7 +33,7 @@ export default function Home() {
             <Link className="customButton" to="/patient">Patient</Link>
            
             
-            <Link className="customButton" to="/loginpage">Staff</Link>
+            <Link className="customButton"  to="/loginpage">Staff</Link>
             
            
             <Link className="customButton" to="/aboutus">Guest</Link>

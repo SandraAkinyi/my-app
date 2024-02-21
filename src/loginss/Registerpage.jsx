@@ -1,4 +1,3 @@
-// RegisterPage.js
 
 import React from "react";
 import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
@@ -62,7 +61,8 @@ function Registerpage() {
             <p><strong>Mission:</strong> </p>
             <p>
               "Our mission is to provide high-quality, patient-centered healthcare with compassion and integrity.
-              We strive to deliver comprehensive medical services, promote wellness, and enhance the overall health of the communities we serve."
+              We strive to deliver comprehensive medical services, promote wellness, and enhance the overall health of 
+              the communities we serve."
             </p>
 
             <p style={{ marginTop: "100px" }}>

@@ -6,8 +6,6 @@ export default function Topbar({ menuOpen, setMenuOpen}) {
     <div className="wrapper">
       <div className="left" onClick={()=>setMenuOpen(false)}>
         <a href="#about" className="logo"> MedicApp</a>
-        
-
       </div>
       <h1>Ayanna Missonary Hospital</h1>
       <div className="right">
