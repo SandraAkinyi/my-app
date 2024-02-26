@@ -6,13 +6,18 @@ import { Link } from "react-router-dom";
 
 function Registerpage() {
   return (
-    <>
+    <div className= "registerpage">
       <div className="register-container">
+      <p className="title">Register</p>
         <form className="inputs">
-          <p className="title">Register</p>
+         
           <label>
             Username:
             <input type="text" name="username" placeholder="Username" required />
+          </label>
+          <label>
+            Phone Number:
+            <input type="text" name="phoneNumber" placeholder="PhoneNumber" required />
           </label>
           <label>
             UserId:
@@ -88,7 +93,7 @@ function Registerpage() {
           </div>
           </div>
       </section>
-    </>
+    </div>
   );
 }
 

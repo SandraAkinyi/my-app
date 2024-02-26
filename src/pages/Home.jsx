@@ -30,7 +30,7 @@ export default function Home() {
 
           <div className="buttonContainer">
            
-            <Link className="customButton" to="/patient">Patient</Link>
+            <Link className="customButton" to="/loginpage">Patient</Link>
            
             
             <Link className="customButton"  to="/loginpage">Staff</Link>

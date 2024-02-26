@@ -1,74 +1,84 @@
-/* Inside src/App.css */
+.loginpage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 145vh;
+  background-color: #f1f1f1;
 
-body {
-	height: 120vh;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-  
-}
-
-.title {
-	text-align: center;
-	font-size: 2rem;
-	font-family: Verdana, Geneva, Tahoma, sans-serif;
+  .login-container {
+    background-color: rgb(26, 42, 50);
+    border-radius: 10px;
     color: whitesmoke;
-    font-weight: 400;
-    margin-bottom: 20px;
-}
-
-.inputs {
-	text-align: center;
-	display: flex;
-	flex-direction: column;
-	margin: auto;
-	width: 18vw;
-	padding: 2vw 1vw;
-	background-color: rgb(26, 42, 50);
-	border-radius: 10px 10px 10px 10px;
-    
-}
-label {
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 30%;
     margin-bottom: 10px;
-    color: #fff; /* Set label color to white */
+    height: 30%;
+    margin-top: 30px;
+
+    .title {
+      text-align: center;
+      font-weight: 400;
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
+
+    .inputs {
+      p {
+        text-align: center;
+        font-weight: 400;
+        font-size: 18px;
+      }
+      display: flex;
+      flex-direction: column;
+
+      label {
+        margin-bottom: 0px;
+        font-weight: bold;
+        color: whitesmoke;
+      }
+
+      input {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+      }
+
+      .customSubmitButton {
+        cursor: pointer;
+        width: 100%;
+        border: none;
+        background: #f98f05;
+        color: #fff;
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 5px;
+      }
+    }
+
+    .register-link {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 14px;
+
+      a {
+        color: #f98f05;
+        text-decoration: none;
+        font-weight: bold;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
   }
 
-input {
-	border: 1px solid rgb(235, 232, 232);
-	border-radius: 10px;
-	padding: 1vw 1vw;
-	outline: none;
-	margin: 5px;
-    color: whitesmoke;
-}
-.register-link {
-    margin-top: 10px;
-    color: #fff;
-    font-size: 14px;
-  }
   
-  .page {
-    color: #f98f05;
-    text-decoration: none;
-  }
-  
-  .page:hover {
-    text-decoration: underline;
-  }
-
-.customSubmitButton {
-    background-color: #f98f05;
-    color: #fff;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .customSubmitButton:hover {
-    background-color: #e07e04;
-  }
-  
-.ayannah-contacts{
+  .ayannah-contacts{
     
     margin-top: 40px; /* Adjust the top margin as needed */
     padding: 20px;
@@ -144,4 +154,5 @@ input {
         }
       }
     }
+}
 }

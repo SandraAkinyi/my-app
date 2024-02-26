@@ -1,31 +1,31 @@
 import React from "react";
-import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';  
-import "./loginpage.scss";
 import { Link } from "react-router-dom";
+import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
+import "./loginpage.scss"; // Make sure to import your styling file
 
 function Loginpage() {
   return (
-    <>
+    <div className="loginpage">
       <div className="login-container">
-        
-
+        <p className="title">Login</p>
         <form className="inputs">
-            <p className="title">Login</p>
           <label>
             Username:
-            <input type="text" name="id" placeholder="Id" required />
+            <input type="text" name="username" placeholder="Username" required />
           </label>
           <label>
             Password:
             <input type="password" name="password" placeholder="Password" required />
           </label>
           <input type="submit" className="customSubmitButton" />
-          <p className="register-link">Don't have an account?  <Link className="page" to="/registerpage">Register Here</Link></p>
+          <p className="register-link">
+            Don't have an account? <Link to="/registerpage">Register here</Link>
+          </p>
         </form>
       </div>
 
       <section className="ayannah-contacts">
-        <div className="left">
+      <div className="left">
           <div className="wrapper">
             <p>
               Ayannah medical center
@@ -53,7 +53,8 @@ function Loginpage() {
             <p><strong>Mission:</strong> </p>
             <p>
               "Our mission is to provide high-quality, patient-centered healthcare with compassion and integrity.
-              We strive to deliver comprehensive medical services, promote wellness, and enhance the overall health of the communities we serve."
+              We strive to deliver comprehensive medical services, promote wellness, and enhance the overall health of 
+              the communities we serve."
             </p>
 
             <p style={{ marginTop: "100px" }}>
@@ -77,9 +78,9 @@ function Loginpage() {
               <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
             </div>
           </div>
-        </div>
+          </div>
       </section>
-    </>
+    </div>
   );
 }
 
