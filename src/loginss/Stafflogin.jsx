@@ -1,19 +1,18 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate, Link } from 'react-router-dom';
-import './loginpage.scss';
+import './stafflogin.scss';
 
-const Login = () => {
+const Staff = () => {
   const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
-    userId: '',
+    staffId: '',
     password: '',
   });
   const [loginSuccess, setLoginSuccess] = useState(false);
   const [loginError, setLoginError] = useState('');
-
-  const { userId, password } = formData;
+  const { staffId, password } = formData;
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -23,13 +22,13 @@ const Login = () => {
     e.preventDefault();
 
     try {
-      const res = await axios.post('http://localhost:5000/login', formData);
+      const res = await axios.post('http://localhost:5000/stafflogin', formData);
 
       if (res.status === 200) {
         console.log('Login successful');
         setLoginSuccess(true);
         setLoginError('');
-        navigate('/patientprofile'); // Replace '/doctor' with the actual path of your doctor page
+        navigate('/nursesprofile'); // Replace '/doctor' with the actual path of your doctor page
       } else if (res.status === 400) {
         console.log('Invalid credentials');
         setLoginError('Invalid credentials');
@@ -44,16 +43,17 @@ const Login = () => {
   };
 
   return (
+    
     <div className="background-container">
-    <div className="blur-overlay3"></div>
-    <div className="login-container">
+      <div className="blur-overlay3"></div>
+      <div className="login-container">
       {loginError && <p className="error-message">{loginError}</p>}
       {loginSuccess && <p className="success-message">Login successful!</p>}
       <form onSubmit={handleSubmit}>
-        <div className="form-group">
-          <label htmlFor="userId">User ID</label>
-          <input type="text" id="userId" name="userId" placeholder="User ID" value={userId} onChange={handleChange} />
-        </div>
+      <div className="form-group">
+  <label htmlFor="staffId">User ID</label>
+  <input type="text" id="staffId" name="staffId" placeholder="staff ID" value={staffId} onChange={handleChange} />
+</div>
         <div className="form-group">
           <label htmlFor="password">Password</label>
           <input type="password" id="password" name="password" placeholder="Password" value={password} onChange={handleChange} />
@@ -65,10 +65,11 @@ const Login = () => {
       <p className="prr">
         Don't have an account? 
       </p>
-      <Link to="/registerpage" className="register-link">Register here</Link>
-    </div>
+      <Link to="/staffregister" className="register-link">Register here</Link>
+      </div>
+      
     </div>
   );
 };
 
-export default Login;
+export default Staff;

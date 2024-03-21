@@ -10,6 +10,16 @@ import Aboutus from './loginss/Aboutus';
 import Doctor from './loginss/Doctor';
 import Loginpage from './loginss/Loginpage';
 import Registerpage from './loginss/Registerpage';
+import Stafflogin from './loginss/Stafflogin';
+import Staffregister from './loginss/Staffregister';
+import Nurses from './loginss/Nurses';
+import Doclogin from './loginss/Doclogin';
+import Docregister from './loginss/Docregister';
+import Lab from './loginss/Lab'
+import Labtechregister from './loginss/Labtecregister';
+import Labtechlogin from './loginss/Labtechlogin';
+
+
 
 
 const router = createBrowserRouter([
@@ -18,7 +28,7 @@ const router = createBrowserRouter([
     element: <div><App /> </div>,
   },
   {
-    path: "/patient",
+    path: "/patientprofile",
     element: <div><Patient /> </div>,
   },
   {
@@ -26,17 +36,51 @@ const router = createBrowserRouter([
     element: <div><Aboutus /> </div>,
   },
   {
-    path: "/doctor",
+    path: "/doctorprofile",
     element: <div><Doctor /> </div>,
   },
   {
-    path: "/loginpage",
+    path: "/patient",
     element: <div><Loginpage /> </div>,
   },
   {
     path: "/registerpage",
     element: <div><Registerpage /> </div>,
   },
+  {
+    path: "/staffregister",
+    element: <div><Staffregister /> </div>,
+  },
+  {
+    path: "/nurses",
+    element: <div><Stafflogin /> </div>,
+  },
+  {
+    path: "/nursesprofile",
+    element: <div><Nurses /> </div>,
+  },
+  {
+    path: "/doctors",
+    element: <div><Doclogin /> </div>,
+  },
+  {
+    path: "/docregister",
+    element: <div><Docregister /> </div>,
+  },
+  {
+    path: "/labtech",
+    element: <div><Lab /> </div>,
+  },
+  {
+    path: "/labtechlogin",
+    element: <div><Labtechlogin /> </div>,
+  },
+  {
+    path: "/labtechregister",
+    element: <div><Labtechregister /> </div>,
+  },
+
+
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

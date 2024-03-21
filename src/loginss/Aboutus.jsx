@@ -2,7 +2,7 @@
 import React from 'react';
 import './aboutus.scss';
 import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
-import { Link } from 'react-router-dom';
+
 
 const Aboutus = () => {
   return (
@@ -13,9 +13,7 @@ const Aboutus = () => {
           <img src="pics/z10.webp" alt="" />
         </div>
       </section>
-      <div className="button-container">
-       <Link className="custom-button" to="/">Back Home</Link>
-      </div>
+     
       <h2>Ayannah Medical Center: A Journey of Healing and Compassion</h2>
       <div className="aboutus-paragraph">
         <p>

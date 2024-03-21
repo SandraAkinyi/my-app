@@ -53,23 +53,21 @@
         }
   
         .buttonContainer {
-          display: flex;
-          justify-content: space-between;
+        
           margin-top: 20px;
   
-          .customButton {
-            padding: 10px 20px;
+          .customButton2 {
+           
             font-size: 16px;
-            background-color: #fbfdff;
+            
             color: #f98f05;
-            border: none;
-            border-radius: 23px;
+           
             cursor: pointer;
-            transition: background-color 0.3s ease;
-            margin-right: 38px;
+           
+            margin-right: 18px;
             text-decoration: none;
             &:hover {
-              background-color: #f98f05;
+            
               color: #ffffff;
             }
           }

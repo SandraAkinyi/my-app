@@ -1,44 +1,96 @@
-.menu{
+.menu {
     width: 200px;
-    height: 100vh;
+    height: 110vh;
     background-color: rgb(26, 42, 50);
     position: fixed;
-    top: 0;
+    top: -80px;
     right: -200px;
-    z-index: 2;
+    z-index: 3;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    transition: all 1s ease;
-
-
-    &.active{
-        right: 0;
-
+    transition: all 0.5s ease; /* Reduced transition duration for smoother animation */
+    overflow: hidden;
+  
+    &.active {
+      right: 0;
     }
-
-    ul{
-        margin: 0;
-        padding: 0;
-        list-style: none;
-        font-size: 21px;
-        font-weight: 100;
-        color: aliceblue;
-        width: 60%;
-        li{
-            margin-bottom: 25px;
-
-            a{
-                font-size: inherit;
-                color: inherit;
-                text-decoration: none;
-
-            }
-            &:hover{
-                font-weight: 800;
-                text-decoration: underline;
-            }
+  
+    ul {
+      margin: 50;
+      padding: 0;
+      list-style: none;
+      font-size: 18px; /* Adjusted font size for smaller screens */
+      font-weight: 100;
+      color: aliceblue;
+      width: 80%; /* Adjusted width for smaller screens */
+      
+      li {
+        margin-bottom: 33px; /* Reduced margin for smaller screens */
+  
+        a {
+          font-size: inherit;
+          color: inherit;
+          text-decoration: none;
         }
+  
+        &:hover {
+          font-weight: 800;
+          text-decoration: underline;
+        }
+      }
     }
-}
+    .menuContainer {
+      position: absolute;
+      top: 73%;
+      left: 0;
+      background-color: rgb(26, 42, 50);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      padding: 10px; /* Adjust padding as needed */
+      width: 80%;
+      margin-bottom: 10px;
+    }
+    
+    .menuContainer ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+     
+    }
+    
+    .menuContainer ul li {
+      padding: 5px 13px;
+      margin-bottom: 15px; /* Decreased margin between items */
+    }
+    
+    
+    .menuContainer ul li a {
+      text-decoration: none;
+      color: #f98f05;
+      
+    }
+    
+    .menuContainer ul li a:hover {
+      text-decoration: underline;
+    }
+    
+    
+  }
+  
+  @media (max-width: 768px) {
+    .menu {
+      width: 100%; /* Set width to 100% for smaller screens */
+      right: -100%; /* Initially hide the menu off-screen on smaller screens */
+    }
+  
+    .menu.active {
+      right: 0; /* Slide the menu into view when active on smaller screens */
+    }
+  
+    ul {
+      font-size: 16px; /* Further reduce font size for smaller screens */
+      width: 100%; 
+    }
+  }
+  

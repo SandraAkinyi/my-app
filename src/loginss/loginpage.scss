@@ -1,158 +1,85 @@
-.loginpage {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 145vh;
-  background-color: #f1f1f1;
+.background-container {
+  position: relative;
+  height: 705px;
+}
 
-  .login-container {
-    background-color: rgb(26, 42, 50);
-    border-radius: 10px;
-    color: whitesmoke;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 30%;
-    margin-bottom: 10px;
-    height: 30%;
-    margin-top: 30px;
+.blur-overlay3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('./backpics/snp.png');
+  background-size: cover;
+  background-position: center;
+  filter: blur(4px);
+  -webkit-filter: blur(4px);
+  z-index: -1;
+}
 
-    .title {
-      text-align: center;
-      font-weight: 400;
-      font-size: 22px;
-      margin-bottom: 20px;
+.login-container {
+  z-index: 1;
+  max-width: 400px;
+  margin: 100px auto 0;
+  padding: 20px;
+  background-color: rgb(26, 42, 50);
+  border: 1px;
+  border-radius: 5px;
+
+  .error-message {
+    color: red;
+  }
+
+  .success-message {
+    color: #f98f05;
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+
+    label {
+      display: block;
+      color: white;
+      margin-bottom: 5px;
     }
 
-    .inputs {
-      p {
-        text-align: center;
-        font-weight: 400;
-        font-size: 18px;
-      }
-      display: flex;
-      flex-direction: column;
-
-      label {
-        margin-bottom: 0px;
-        font-weight: bold;
-        color: whitesmoke;
-      }
-
-      input {
-        width: 100%;
-        padding: 10px;
-        margin-bottom: 20px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        box-sizing: border-box;
-      }
-
-      .customSubmitButton {
-        cursor: pointer;
-        width: 100%;
-        border: none;
-        background: #f98f05;
-        color: #fff;
-        padding: 10px;
-        font-size: 16px;
-        border-radius: 5px;
-      }
-    }
-
-    .register-link {
-      text-align: center;
-      margin-top: 20px;
-      font-size: 14px;
-
-      a {
-        color: #f98f05;
-        text-decoration: none;
-        font-weight: bold;
-
-        &:hover {
-          text-decoration: underline;
-        }
-      }
+    input {
+      width: 100%;
+      padding: 10px;
+      
     }
   }
 
-  
-  .ayannah-contacts{
-    
-    margin-top: 40px; /* Adjust the top margin as needed */
-    padding: 20px;
-    background-color: #f5f5f5; /* Set the background color */
-    border-radius: 10px; /* Add rounded corners */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
-    display: flex;
+  .login-button {
+    background-color: #f98f05;
+    color: #ffffff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-bottom: 18px;
 
-  
-    .left {
-      width: 30%; /* Adjust the width of each column as needed */
-    padding: 20px;
-      overflow: hidden;
-  
-      .wrapper {
-        padding: 20px;
-  
-        p {
-          font-size: 14px;
-          line-height: 1.5;
-          margin-bottom: 10px;
-  
-          strong {
-            font-weight: bold;
-          }
-        }
-      }
+    &:hover {
+      background-color: #ffffff;
+      color: #f98f05;
     }
-  
-    .middle {
-      width: 30%; /* Adjust the width of each column as needed */
-      padding: 20px;
-      overflow: hidden;
-  
-      .wrapper {
-        padding: 20px;
-  
-        p {
-          font-size: 14px;
-          line-height: 1.5;
-          margin-bottom: 10px;
-        }
-      }
+  }
+
+  .register-link {
+    color: #f98f05;
+    text-decoration: none;
+    margin-top: 10px;
+    display: inline-block;
+    text-align: center;
+    
+    &:hover {
+      color: #ffffff;
     }
-  
-    .right {
-      width: 30%; /* Adjust the width of each column as needed */
-      padding: 20px;
-      overflow: hidden;
-  
-      .wrapper {
-        padding: 20px;
-  
-        p {
-          font-size: 14px;
-          line-height: 1.5;
-          margin-bottom: 10px;
-        }
-  
-        .social-icons {
-          display: flex;
-          a {
-            margin-right: 40px;
-            text-decoration: none;
-            color: #010525;
-            transition: color 0.3s ease;
-            
-  
-            &:hover {
-              color: #b58904; // Change to your desired hover color
-            }
-          }
-        }
-      }
-    }
-}
+
+  }
+  .prr{
+    display: block;
+    color: white;
+    margin-bottom: 5px;
+  }
 }

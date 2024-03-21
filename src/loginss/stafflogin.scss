@@ -3,7 +3,7 @@
   height: 705px;
 }
 
-.blur-overlay {
+.blur-overlay3 {
   position: absolute;
   top: 0;
   left: 0;
@@ -16,22 +16,30 @@
   -webkit-filter: blur(4px);
   z-index: -1;
 }
-.register-container {
-  max-width: 400px;
+
+.login-container {
+  position: relative;
+  z-index: 1;
+  max-width: 348px;
   margin: 100px auto 0;
   padding: 20px;
-  z-index: 1;
   background-color: rgb(26, 42, 50);
   border: 1px ;
   border-radius: 5px;
+  color: white;
+
+
+  .error-message {
+    color: red;
+  }
 
   .success-message {
-    color: #2ecc71;
-    margin-bottom: 10px;
+    color: #f98f05;
   }
 
   .form-group {
     margin-bottom: 15px;
+
     label {
       display: block;
       color: white;
@@ -41,14 +49,12 @@
     input {
       width: 100%;
       padding: 10px;
-      box-sizing: border-box;
-      margin-top: 5px; // Add some space between input fields
     }
   }
 
-  .register-button {
-    background-color:#f98f05;
-    color:#ffffff;
+  .login-button {
+    background-color: #f98f05;
+    color: #ffffff;
     padding: 10px 15px;
     border: none;
     border-radius: 3px;
@@ -56,12 +62,12 @@
     margin-bottom: 18px;
 
     &:hover {
-      background-color:#ffffff;
-      color:#f98f05;
+      background-color: #ffffff;
+      color: #f98f05;
     }
   }
 
-  .login-link {
+  .register-link {
     color: #f98f05;
     text-decoration: none;
     margin-top: 10px;
@@ -69,7 +75,7 @@
     text-align: center;
 
     &:hover {
-      color: #efe9e1;
+      color: #ffffff;
     }
   }
 
@@ -77,11 +83,5 @@
     display: block;
     color: white;
     margin-bottom: 5px;
-  }
-
-  @media screen and (max-width: 600px) {
-    .register-container {
-      width: 60%;
-    }
   }
 }
