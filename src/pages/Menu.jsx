@@ -28,16 +28,17 @@ export default function Menu({ menuOpen, setMenuOpen }) {
           <Link className="customButton" to="/aboutus">About Us</Link>
         </li>
         <li onClick={() => setMenuOpen(false)}>
-          <Link className="customButton" to="/contacts">Contacts</Link>
+          <Link className="customButton" to="/aboutus">Contacts</Link>
         </li>
         <li onClick={() => setMenuOpen(false)}>
-          <Link className="customButton" to="/appointment">Appointment</Link>
+          <Link className="customButton" to="/">Appointment</Link>
         </li>
+
         <li onClick={() => setMenuOpen(false)}>
           <Link className="customButton" to="/blogs">Blogs</Link>
         </li>
         <li onClick={() => setMenuOpen(false)}>
-          <Link className="customButton" to="/events">Events</Link>
+          <Link className="customButton" to="/aboutus">Events</Link>
         </li>
         <li onClick={() => setMenuOpen(true)}>
           <Link ref={buttonRef} className="customButton" onClick={() => setOpen(!open)}>Log In</Link>

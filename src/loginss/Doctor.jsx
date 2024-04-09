@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import './doctor.scss';
 
 const Doctors = () => {
@@ -52,10 +52,10 @@ const Doctors = () => {
 
   const handleSend = async (e) => {
     e.preventDefault();
-
+  
     try {
       const response = await axios.post('http://localhost:5000/send-message', messageData);
-
+  
       if (response.status === 200) {
         setIsEmailSent(true);
         setMessageData({ to: '', message: '' }); // Clear the message input fields after sending
@@ -65,7 +65,28 @@ const Doctors = () => {
     } catch (error) {
       console.error('Error sending message:', error.message);
     }
+  
+    // Schedule sending the email every 2 minutes for a total of 6 minutes
+    let count = 0;
+    const intervalId = setInterval(async () => {
+      count++;
+      if (count <= 3) {
+        try {
+          const response = await axios.post('http://localhost:5000/send-message', messageData);
+          if (response.status === 200) {
+            console.log('Message sent successfully');
+          } else {
+            console.error('Error sending message:', response.statusText);
+          }
+        } catch (error) {
+          console.error('Error sending message:', error.message);
+        }
+      } else {
+        clearInterval(intervalId);
+      }
+    }, 2 * 60 * 1000); // Run every 2 minutes (2 * 60 * 1000 milliseconds)
   };
+  
 
   const handleGetReports = async () => {
     try {
@@ -79,6 +100,7 @@ const Doctors = () => {
       console.error('Error fetching reports:', err);
     }
   };
+
 
   return (
     <div className="top2">
@@ -132,13 +154,15 @@ const Doctors = () => {
           <div className="drug-administration-section">
             <div className="column">
               <div className="form-group">
-                <label htmlFor="drugName">Drug Name</label>
-                <input type="text" id="drugName" name="drugName" placeholder="Drug Name" value={drugName} onChange={handleChange} />
-              </div>
-
-              <div className="form-group">
-                <label htmlFor="drugDuration">Drug Duration</label>
-                <input type="text" id="drugDuration" name="drugDuration" placeholder="Drug Duration" value={drugDuration} onChange={handleChange} />
+                <label className="newlabel" htmlFor="drugName">Drug Administration and Recommendations</label>
+                <textarea
+                id="drugName"
+                name="drugName"
+                placeholder="Drug Name"
+                value={drugName}
+                onChange={handleChange}
+                className="large-textarea"
+              />
               </div>
             </div>
           </div>
@@ -176,7 +200,7 @@ const Doctors = () => {
       </div>
 
       <div className="button-container">
-        <button className="custom-button">Logout</button>
+      <button className="custom-button"><Link to="/" className="custom-button">LogOut</Link></button>
       </div>
     </div>
     </div>

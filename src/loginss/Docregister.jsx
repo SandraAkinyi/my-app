@@ -35,7 +35,7 @@ const Staffregister = () => {
       setIsRegistered(true);
 
       // Navigate to the login page after successful registration
-      navigate('/doclogin');
+      navigate('/doctors');
     } catch (err) {
       console.error(err.response.data);
       setError('Registration failed. Please try again.');
@@ -74,7 +74,7 @@ const Staffregister = () => {
       <p className='prr'>
         Already have an account? 
       </p>
-      <Link to="/doclogin" className="login-link">Login here</Link>
+      <Link to="/doctors" className="login-link">Login here</Link>
     </div>
     </div>
   );

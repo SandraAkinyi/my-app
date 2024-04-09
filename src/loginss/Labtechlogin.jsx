@@ -28,7 +28,7 @@ const Labtechlogin = () => {
         console.log('Login successful');
         setLoginSuccess(true);
         setLoginError('');
-        navigate('/labtech'); 
+        navigate('/labtechprofile'); 
       } else if (res.status === 400) {
         console.log('Invalid credentials');
         setLoginError('Invalid credentials');
@@ -51,7 +51,7 @@ const Labtechlogin = () => {
       {loginSuccess && <p className="success-message">Login successful!</p>}
       <form onSubmit={handleSubmit}>
       <div className="form-group">
-  <label htmlFor="staffId">User ID</label>
+  <label htmlFor="labId">User ID</label>
   <input type="text" id="labId" name="labId" placeholder="lab Id" value={labId} onChange={handleChange} />
 </div>
         <div className="form-group">

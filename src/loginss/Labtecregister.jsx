@@ -35,7 +35,7 @@ const Labtechregister = () => {
       setIsRegistered(true);
 
       // Navigate to the login page after successful registration
-      navigate('/labtechlogin');
+      navigate('/labtech');
     } catch (err) {
       console.error(err.response.data);
       setError('Registration failed. Please try again.');
@@ -74,7 +74,7 @@ const Labtechregister = () => {
       <p className='prr'>
         Already have an account? 
       </p>
-      <Link to="/labtechlogin" className="login-link">Login here</Link>
+      <Link to="/labtech" className="login-link">Login here</Link>
     </div>
     </div>
 

@@ -147,4 +147,19 @@
       
   }
   
-  
+  @media screen and (max-width: 840px) {
+    .top-section{
+      .imgContainer{
+          .image-title {
+            position: absolute;
+            top: 69%;
+            left: 39%;
+            transform: translate(-50%, -50%);
+            color: rgb(17, 28, 33); 
+            font-size: 18px; 
+            font-family: sans-serif;
+            font-weight: 900;
+          }
+        }
+      }
+    }

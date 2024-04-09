@@ -1,7 +1,7 @@
 import './nurses.scss';
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
 const Nurses = () => {
   const navigate = useNavigate();
@@ -50,9 +50,9 @@ const Nurses = () => {
   };
 
   useEffect(() => {
-    // Call the handleUpdateClick function when the component mounts
+
     handleUpdateClick();
-  }, [userId]); // userId should be a state variable representing the current user's ID
+  }, [userId]); 
 
   return (
     <div className="top">
@@ -114,7 +114,7 @@ const Nurses = () => {
           </form>
 
           <div className="button-container">
-            <button className="custom-button">Logout</button>
+            <button className="custom-button"><Link to="/" className="custom-button">LogOut</Link></button>
           </div>
         </div>
       </div>

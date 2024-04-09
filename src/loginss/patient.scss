@@ -1,162 +1,117 @@
-.patient {
-    height: 750px;
-    background-color: rgb(26, 42, 50);
-  
-    .imgContainer {
-      position: relative;
-      width: 100%;
-      height: 305px;
-      overflow: hidden;
-  
-      img {
-        width: 100%;
-        display: block;
-        height: 331px;
-      }
-      .image-title {
-        position: absolute;
-        top: 69%;
-        left: 13%;
-        transform: translate(-50%, -50%);
-        color: rgb(248, 252, 253); 
-        font-size: 37px; 
-        font-family: sans-serif;
-        font-weight: 900;
-      }
-    }
-    .top-section {
-      height: 302px;
-      background: rgb(26, 42, 50);
-      overflow: hidden;
-      /* Add any additional styles for the top section */
-    }
-  
-    .patient-info-section {
-      background-color: rgb(26, 42, 50);
-      padding: 20px;
-      display: flex; // Align items side by side
-  
-      .patient-info-container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-left: -39px;
-        
-        button {
-            /* Styles for the button beside the Patient ID input */
-            padding: 10px;
-            background-color: #ffffff;
-            color: #f98f05;
-            border: none;
-            cursor: pointer;
-            font-size: 16px;
-            border-radius: 5px;
-            width: 86%;
-          
+/* patient.scss */
 
-      
-            &:hover {
-              background-color: #f98f05;
-              color: #ffffff;
-            }
-        }
-       
-  
-        label {
-          display: block;
-          width: calc(48% - 1.5%);
-          color: #ffffff;
-          margin-right: 3%;
-          padding-left: 35px;
-         
-          
-        }
-  
-        input {
-            width: 60%; // Adjust the width as needed, leaving a small gap between inputs
-            padding: 9px;
-            margin-bottom: 0px;
-            
-        }
-      }
-      button {
-        /* Styles for the button below the inputs */
-        padding: 10px;
-        background-color: #ffffff;
-        color: #f98f05;
-        border: none;
-        cursor: pointer;
-        font-size: 14px;
-        border-radius: 5px;
-        width: 11%;
-        display: flex;
-        margin-left: 19px;
+.top3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 140vh;
 
-        &:hover {
-          background-color: #f98f05;
-          color: #ffffff;
-        }
-      }
-  
-      
-    }
-       
-  
-    .typing-platform {
-      padding: 20px;
-  
-      textarea {
-        width: 97%;
-        height: 260px; // Increase the size of the textarea
-        padding: 10px;
-        /* Add any additional styles for the textarea */
-      }
-    }
-    .drug-administration-section {
-        display: flex;
-        justify-content: space-between;
-        margin-top: 20px;
-    
-        .column {
-          width: 48%; /* Each column takes up 48% of the width with a small gap between them */
-          padding: 10px;
-          border: 1px solid #ccc; /* Add border for visual separation */
-          box-sizing: border-box;
-    
-          label {
-            display: block;
-            margin-bottom: 10px;
-            color: #ffffff;
-          }
-    
-          input {
-            width: 87%;
-            padding: 10px;
-            margin-bottom: 20px;
-          }
-        }
-      }
-    .button-container {
-        margin-top: 20px;
-    
-        button {
-          margin-right: 160px; // Add spacing between buttons if needed
-          padding: 10px 20px;
-          background-color: #ffffff;
-          color: #f98f05; // Change to your preferred text color
-          border: none;
-          cursor: pointer;
-          font-size: 12px;
-          border-radius: 5px;
-          margin-left: 26px;
-     
-          &:hover {
-            background-color: #f98f05;
-        color: #ffffff; // Change to your preferred hover color
-          }
-        }
-      }
-      
-    /* Add any additional styles for the whole page */
+  .blur-overlay2 {
+    position: absolute;
+    width: 100%;
+    height: 141%;
+    z-index: -1;
   }
   
+  .container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+   
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .image-container {
+    flex: 1;
+    padding: 2rem;
+  }
+  
+  .image-title {
+    font-size: 24px;
+    margin-bottom: 1rem;
+  }
+  
+  .image-container img {
+    max-width: 100%;
+    height: 40%;
+    border-radius: 10px;
+    margin-bottom: 80px;
+  }
+  
+  .form-container {
+    flex: 1;
+    padding: 2rem;
+  }
+  
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-group label {
+    font-weight: bold;
+  }
+  
+  .large-textarea {
+    width: 100%;
+    height: 150px;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: vertical;
+    margin-bottom: 1rem;
+  }
+  
+  .register-button,
+  button[type='submit'] {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .register-button:hover,
+  button[type='submit']:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .error-message,
+  .success-message {
+    margin-top: 1rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+  }
+  
+  .error-message {
+    background-color: #ffcccc;
+    color: #ff0000;
+  }
+  
+  .success-message {
+    background-color: #ccffcc;
+    color: #008000;
+  }
+  
+  .form2 {
+    margin-top: 2rem;
+  }
+  
+  .custom-button {
+    background-color: #ff5722;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .custom-button:hover {
+    background-color: #e64a19;
+  }
+  
+}

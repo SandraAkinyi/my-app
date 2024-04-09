@@ -31,7 +31,7 @@ const Register = () => {
       setIsRegistered(true);
 
       // Navigate to the login page after successful registration
-      navigate('/loginpage'); // Use navigate directly without .push()
+      navigate('/patient'); // Use navigate directly without .push()
     } catch (err) {
       console.error(err.response.data);
     }
@@ -66,7 +66,7 @@ const Register = () => {
       <p className='prr'>
         Already have an account? 
       </p>
-      <Link to="/loginpage" className="login-link">Login here</Link>
+      <Link to="/patient" className="login-link">Login here</Link>
     </div>
     </div>
   );

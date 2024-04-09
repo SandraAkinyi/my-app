@@ -68,11 +68,11 @@ const router = createBrowserRouter([
     element: <div><Docregister /> </div>,
   },
   {
-    path: "/labtech",
+    path: "/labtechprofile",
     element: <div><Lab /> </div>,
   },
   {
-    path: "/labtechlogin",
+    path: "/labtech",
     element: <div><Labtechlogin /> </div>,
   },
   {

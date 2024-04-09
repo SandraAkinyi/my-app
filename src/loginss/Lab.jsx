@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import './doctor.scss';
 
 const Lab = () => {
@@ -10,7 +10,6 @@ const Lab = () => {
     username: '',
     userId: '',
     generatedreport: '',
-
   });
 
   const [messageData, setMessageData] = useState({
@@ -18,7 +17,7 @@ const Lab = () => {
     message: '',
   });
 
-  const [setIsEmailSent] = useState(false);
+  const [isEmailSent, setIsEmailSent] = useState(false); // Correction here
   const [isRegistered, setIsRegistered] = useState(false);
   const [error, setError] = useState('');
 
@@ -41,7 +40,7 @@ const Lab = () => {
       const res = await axios.post('http://localhost:5000/labreport', formData);
       console.log(res.data);
       setIsRegistered(true);
-      navigate('/labtech');
+      navigate('/labtechprofile');
     } catch (err) {
       setError('Failed. Please check your information.'); // Display an error message
       console.error(err.response.data);
@@ -70,80 +69,79 @@ const Lab = () => {
       console.error('Error sending message:', error.message);
     }
   };
+
   return (
     <div className="top2">
       <div className="blur-overlay2"></div>
-    <div className="doctor">
-      <section className="top-section">
-        <div className="imgContainer">
-          <h1 className="image-title">Lab platform</h1>
-          <img src="pics/h1.jpg" alt="" />
-        </div>
-      </section>
+      <div className="doctor">
+        <section className="top-section">
+          <div className="imgContainer">
+            <h1 className="image-title">Lab platform</h1>
+            <img src="pics/h1.jpg" alt="" />
+          </div>
+        </section>
 
-      <form onSubmit={handleSubmit} className="form-container">
-        <div className="patient-info-container">
-          <div className="form-group">
-            <label htmlFor="username">User Name</label>
-            <input type="text" id="username" name="username" placeholder="User Name" value={username} onChange={handleChange} />
+        <form onSubmit={handleSubmit} className="form-container">
+          <div className="patient-info-container">
+            <div className="form-group">
+              <label htmlFor="username">User Name</label>
+              <input type="text" id="username" name="username" placeholder="User Name" value={username} onChange={handleChange} />
+            </div>
+
+            <div className="form-group">
+              <label htmlFor="userId">User ID</label>
+              <input type="text" id="userId" name="userId" placeholder="User ID" value={userId} onChange={handleChange} />
+            </div>
           </div>
 
-          <div className="form-group">
-            <label htmlFor="userId">User ID</label>
-            <input type="text" id="userId" name="userId" placeholder="User ID" value={userId} onChange={handleChange} />
+          <div className="report-area">
+            <div className="report">
+              <textarea
+                id="generatedreport"
+                name="generatedreport"
+                placeholder="Generate report"
+                value={generatedreport}
+                onChange={handleChange}
+                className="large-textarea"
+              />
+            </div>
           </div>
-        </div>
 
-        <div className="report-area">
-          <div className="report">
-            <textarea
-              id="generatedreport"
-              name="generatedreport"
-              placeholder="Generate report"
-              value={generatedreport}
-              onChange={handleChange}
-              className="large-textarea"
-            />
-          </div>
-        </div>
+          {error && <div className="error-message">{error}</div>}
+          {isRegistered && <div className="success-message">successful!</div>}
+          <button type="submit" className="register-button">
+            Submit
+          </button>
+        </form>
 
-        {error && <div className="error-message">{error}</div>}
-        {isRegistered && <div className="success-message">successful!</div>}
-        <button type="submit" className="register-button">
-          Submit
-        </button>
-      </form>
-
-      <div className="form2">
-
+        <div className="form2">
           <form onSubmit={handleSend}>
-          
-        <input
-          type="email"
-          id="to"
-          name="to"
-          placeholder="patientemail@gmail"
-          value={messageData.to}
-          onChange={handleChange2}
-        />
-          <textarea
-          id="message"
-          name="message"
-          value={messageData.message}
-          onChange={handleChange2}
-          rows="4"
-          required
-        ></textarea>
-         {error && <div className="error-message">{error}</div>}
-        {isRegistered && <div className="success-message">successful!</div>}
+            <input
+              type="email"
+              id="to"
+              name="to"
+              placeholder="patientemail@gmail"
+              value={messageData.to}
+              onChange={handleChange2}
+            />
+            <textarea
+              id="message"
+              name="message"
+              value={messageData.message}
+              onChange={handleChange2}
+              rows="4"
+              required
+            ></textarea>
+            {error && <div className="error-message">{error}</div>}
+            {isEmailSent && <div className="success-message">Email sent successfully!</div>}
             <button type="submit">Send Email</button>
           </form>
-      </div>
+        </div>
 
-      <div className="button-container">
-        <button className="custom-button">Logout</button>
+        <div className="button-container">
+          <button className="custom-button"><Link to="/" className="custom-button">LogOut</Link></button>
+        </div>
       </div>
-    </div>
     </div>
   );
 };

@@ -78,19 +78,68 @@
     
   }
   
-  @media (max-width: 768px) {
+  @media screen and (max-width: 600px) {
     .menu {
-      width: 100%; /* Set width to 100% for smaller screens */
+      width: 100px; /* Set width to 100% for smaller screens */
       right: -100%; /* Initially hide the menu off-screen on smaller screens */
+      height: 70vh;
+      position: fixed;
+      top: -80px;
+      .menu.active {
+        right: 0; /* Slide the menu into view when active on smaller screens */
+      }
+      ul {
+        margin: 50;
+        padding: 0;
+        list-style: none;
+        font-size: 10px; /* Adjusted font size for smaller screens */
+        font-weight: 100;
+        color: aliceblue;
+        width: 80%; /* Adjusted width for smaller screens */
+        
+        li {
+          margin-bottom: 10px; /* Reduced margin for smaller screens */
+    
+          a {
+            font-size: inherit;
+            color: inherit;
+            text-decoration: none;
+            font-size: 10px;
+          }
+    
+          &:hover {
+            font-weight: 800;
+            text-decoration: underline;
+          }
+        }
+      }
+      .menuContainer {
+        position: absolute;
+        top: 63%;
+        left: 0;
+        background-color: rgb(26, 42, 50);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        padding: 10px; /* Adjust padding as needed */
+        width: 80%;
+        margin-bottom: 10px;
+      }
+      
+      .menuContainer ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+       
+      }
+      
+      .menuContainer ul li {
+        padding: 0px 0px;
+        margin-bottom: 10px; /* Decreased margin between items */
+        font-size: 10px;
+      }
+      
     }
   
-    .menu.active {
-      right: 0; /* Slide the menu into view when active on smaller screens */
-    }
   
-    ul {
-      font-size: 16px; /* Further reduce font size for smaller screens */
-      width: 100%; 
-    }
+   
   }
-  
+ 
