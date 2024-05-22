@@ -1,19 +1,43 @@
 
 .blog {
-  background-color: rgb(26, 42, 50);
+  background-color: rgb(245, 243, 240);
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
   height: 500px;
   overflow: hidden;
+  margin-top: 70px;
 
+  h4 {
+    font-size: 3rem;
+    font-family: "Sacramento", cursive;
+    color: #333;
+    margin-bottom: 15px;
+    margin-top: 0; /* Reset top margin */
+    text-align: center; /* Center text */
+    position: absolute; /* Position at the top */
+    top: -4px; /* Adjust the top spacing */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center horizontally */
+  }
+  
+  h4::after {
+    content: '';
+    position: absolute;
+    left: 50%; /* Adjust the left position to center the underline */
+    bottom: 11px; /* Bring the underline closer to the h4 title */
+    height: 2px;
+    width: 300px; /* Adjust the width of the underline */
+    background-color: #333;
+    transform: translateX(-50%); /* Center the underline horizontally */
+  }
+  
+  
   .arrow {
     height: 50px;
     position: absolute;
     cursor: pointer;
-
-   
 
     &.left {
       left: 100px;
@@ -31,9 +55,7 @@
     position: absolute;
     left: 0;
     transition: all 1s ease-out;
-
    
-
     .container {
       width: 100vw;
       display: flex;
@@ -78,18 +100,14 @@
 
               img {
                 width: 25px;
-
-                
               }
             }
             h2 {
               font-size: 20px;
-
               
             }
             p {
               font-size: 13px;
-             
             }
             .customButton {
                 font-size: 13px;
@@ -126,38 +144,45 @@
   }
 }
  // Media queries for responsiveness
- @media screen and (max-width: 600px) {
+ @media (min-width: 601px) and (max-width: 1281px) {
   .blog {
+    height: 406px;
+    margin-top: 100px;
+    
+    h4 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+
+    }
+    h4::after {
+   visibility: collapse;
+    }
+    
+       
     .arrow {
-      height: 25px;
+      height: 40px;
       position: absolute;
       cursor: pointer;
   
-     
-  
       &.left {
-        left: 100px;
+        left: 10px;
         transform: rotateY(180deg);
       }
   
       &.right {
-        right: 100px;
+        right: 35px;
       }
     }
   
     .slider {
-      height: 350px;
-      display: flex;
-      position: absolute;
-      left: 0;
-      transition: all 1s ease-out;
-  
+      height: 280px;
+
       .container {
-        width: 80vw;
-    
+        width: 100vw;
+  
         .item {
-          width: 700px;
-          height: 80%;
+          width: 400px;
+
           .left {
             flex: 4;
             height: 80%;
@@ -166,53 +191,121 @@
             justify-content: center;
   
             .leftContainer {
-
+              width: 90%;
+              height: 70%;
+              display: flex;
+              flex-direction: column;
               justify-content: space-between;
+  
               .imgContainer {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                background-color: rgb(245, 179, 155);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+  
+                
+  
                 img {
-                  width: 20px;
+                  width: 25px;
                 }
               }
               h2 {
                 font-size: 16px;
+                
               }
               p {
-                font-size: 11px;
-               
+                font-size: 12px;
               }
-              .customButton {
-                  font-size: 13px;
-                  background-color: #fbfdff;
-                  color: #f98f05;
-                  border: none;
-                  border-radius: 23px;
-                  cursor: pointer;
-                  transition: background-color 0.3s ease;
-                  
-        
-                  &:hover {
-                    background-color: #f98f05;
-                    color: #ffffff;
-                  }
-                }
-            }
-          }
-          .right {
-            flex: 8;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-  
-            img {
-              width: 400px;
-              transform: rotate(-10deg);
             }
           }
         }
       }
     }
   }
- 
-}
+
+ }
+ @media screen and (max-width: 600px) {
+  .blog {
+    height: 395px;
+    margin-top: 30px;
+    
+    h4 {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+
+    }
+    h4::after {
+      visibility: collapse;
+       }
+       
+       
+    .arrow {
+      height: 40px;
+      position: absolute;
+      cursor: pointer;
+  
+      &.left {
+        left: 10px;
+        transform: rotateY(180deg);
+      }
+  
+      &.right {
+        right: 35px;
+      }
+    }
+  
+    .slider {
+      height: 280px;
+
+      .container {
+        width: 99vw;
+  
+        .item {
+          width: 284px;
+
+          .left {
+            flex: 4;
+            height: 80%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+  
+            .leftContainer {
+              width: 90%;
+              height: 70%;
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+  
+              .imgContainer {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                background-color: rgb(245, 179, 155);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+  
+                
+  
+                img {
+                  width: 25px;
+                }
+              }
+              h2 {
+                font-size: 16px;
+                
+              }
+              p {
+                font-size: 9px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  }

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './menu.scss';
 
 export default function Menu({ menuOpen, setMenuOpen }) {
-  const Menus = ["Doctors", "Nurses", "LabTech", "Patient"];
+  const Menus = ["Admin", "Staff", "Others"];
   const [open, setOpen] = useState(false);
 
   const buttonRef = useRef();
@@ -13,7 +13,6 @@ export default function Menu({ menuOpen, setMenuOpen }) {
         setOpen(false);
       }
     }
-
     window.addEventListener('click', handleClickOutside);
     return () => window.removeEventListener('click', handleClickOutside);
   }, [buttonRef]);
@@ -25,20 +24,22 @@ export default function Menu({ menuOpen, setMenuOpen }) {
           <Link className="customButton" to="/">Home</Link>
         </li>
         <li onClick={() => setMenuOpen(false)}>
-          <Link className="customButton" to="/aboutus">About Us</Link>
+          <Link className="customButton" to="/">About Us</Link>
         </li>
         <li onClick={() => setMenuOpen(false)}>
-          <Link className="customButton" to="/aboutus">Contacts</Link>
+          <Link className="customButton" to="/">Contacts</Link>
         </li>
         <li onClick={() => setMenuOpen(false)}>
-          <Link className="customButton" to="/">Appointment</Link>
-        </li>
-
-        <li onClick={() => setMenuOpen(false)}>
-          <Link className="customButton" to="/blogs">Blogs</Link>
+          <Link className="customButton" to="/">Bookings</Link>
         </li>
         <li onClick={() => setMenuOpen(false)}>
-          <Link className="customButton" to="/aboutus">Events</Link>
+          <Link className="customButton" to="/">Blogs</Link>
+        </li>
+        <li onClick={() => setMenuOpen(false)}>
+          <Link className="customButton" to="/">Events</Link>
+        </li>
+        <li onClick={() => setMenuOpen(false)}>
+          <Link className="customButton" to="/">Help</Link>
         </li>
         <li onClick={() => setMenuOpen(true)}>
           <Link ref={buttonRef} className="customButton" onClick={() => setOpen(!open)}>Log In</Link>

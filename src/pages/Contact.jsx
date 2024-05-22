@@ -10,7 +10,7 @@ export default function contact() {
       <div className="left">
       <div className="wrapper">
       <p>
-           <p>Ayannah medical center </p> 
+           <p>Ayannah tourism center </p> 
            <p><strong>Post Office:</strong> P.O. Box 57811, 00200, City Square,
             Nairobi, Kenya</p>
             <p><strong>Email:</strong> info@ayannah.org,</p>
@@ -27,17 +27,17 @@ export default function contact() {
         <div className="wrapper">
         <p><strong>Vision:</strong></p>
         <p>
-            "To be recognized as a leading healthcare institution, committed to delivering exceptional medical services,
-             fostering innovation, and advancing the health and well-being of our community."
+            "To be recognized as a leading tourism agency, committed to delivering exceptional tourism services,
+             fostering innovation, and advancing the tourism and well-being of our customers."
           </p>
           <p><strong>Mission:</strong> </p>
           <p>
-            "Our mission is to provide high-quality, patient-centered healthcare with compassion and integrity.
-             We strive to deliver comprehensive medical services, promote wellness, and enhance the overall health of the communities we serve."
+            "Our mission is to provide high-quality, tourist-centered care with compassion and integrity.
+             We strive to deliver comprehensive tourism services, promote care, and enhance the overall experience of the communities we serve."
           </p>
         
          <p style={{ marginTop: "100px" }}>
-            Copyright © 2023 medicapp · All Rights Reserved
+            Copyright © 2023 ayannah · All Rights Reserved
           </p>
         </div>
         

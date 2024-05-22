@@ -1,0 +1,306 @@
+.booking-container1 {
+    max-width: 1473px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    flex-direction: column;
+    position: relative;
+
+     h7 {
+        text-align: center; /* Center align the heading */
+        font-family: "Sacramento", cursive;
+        overflow: hidden;
+        font-size: 3rem; 
+        color: #333;
+        margin-left: 532px;
+        font-weight: 600;
+        margin-bottom: 20px;
+        
+      }
+      .destination-form-container1 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      
+      .booking-form-container1 {
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #fff;
+      }
+      
+      .selected-destination-info {
+        margin-right: 20px; /* Add some spacing between the form and selected destination */
+      }
+      
+      .selected-destination-info img {
+        width: 604px;
+        height: 375px;
+      }
+      
+  .destinations-container1 {
+    margin-bottom: 20px;
+  }
+  /* Add this to your bookingpage.scss file */
+
+ .destination-item1 p {
+    margin: 0; /* Remove default margin */
+    font-size: 12px; /* Adjust font size */
+    color: #333; /* Adjust text color */
+    font-family: "Aboreto", system-ui;
+    font-weight: 800;
+  }
+  
+  .selected-destination-info p {
+    margin: 0; /* Remove default margin */
+    font-size: 16px; /* Adjust font size */
+    color: #333; /* Adjust text color */
+    font-family: "Aboreto", system-ui;
+    font-weight: 800;
+  }
+  
+  .destinations-container1 ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex; /* Change display to flex */
+    flex-wrap: wrap; /* Allow wrapping if destinations exceed container width */
+  }
+  
+  .destinations-container1 ul li {
+    cursor: pointer;
+    margin-right: 20px; /* Add margin between destination items */
+  }
+  
+  .destination-item1 {
+    display: flex; /* Display each destination item as a flex container */
+    align-items: center; /* Center align items vertically */
+  }
+  
+  .destination-item1 img {
+    width: 362px; /* Set a fixed width for the destination images */
+    height: 271px; /* Set a fixed height for the destination images */
+    margin-top: 30px;
+    margin-right: 10px;
+    margin-bottom: 20px; /* Add some space between image and text */
+  }
+  
+  .booking-form-container1 {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    width: 500px;
+    height: 550px;
+    margin-right: 20px;
+  }
+  h9 {
+    margin-top: 0;
+    font-family: "Sacramento", cursive;
+    margin-bottom: 36px;
+    font-weight: 800;
+    font-size: 185%;
+    margin-left: 55px;
+ 
+  }
+  
+  h8 {
+    margin-top: 0;
+    font-family: "Aboreto", system-ui;
+    margin-bottom: 36px;
+    font-weight: 800;
+ 
+  }
+  
+  .booking-form-container1 form {
+    display: grid;
+    margin-top: 15px;
+    font-family: "Aboreto", system-ui;
+    gap: 10px;
+    font-weight: 800;
+  }
+  
+  .booking-form-container1 label {
+    display: grid;
+    gap: 16px;
+    font-family: "Aboreto", system-ui;
+    font-weight: 800;
+  }
+  
+  .booking-form-container1 button 
+  {
+    padding: 10px 20px;
+    margin-left: 200px;
+    margin-top: 60px;
+    width: 95px;
+    font-family: "Aboreto", system-ui;
+    background-color: #292823;
+    color: #fff;
+    border: none;
+    font-weight: 800;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .booking-form-container1 button:hover {
+    background-color: #3f3f3672;
+  }
+}  
+@media screen and (max-width: 900px) {
+  
+  .booking-container1 {
+    max-width: 400px;
+    margin: auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    flex-direction: column;
+    position: relative;
+
+     h7 {
+        text-align: center; /* Center align the heading */
+        font-family: "Sacramento", cursive;
+        overflow: hidden;
+        font-size: 1.7rem; 
+        color: #333;
+        margin-left: 52px;
+        font-weight: 600;
+        margin-bottom: 29px;
+
+        
+      }
+      .destination-form-container1 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      
+      .booking-form-container1 {
+        background-color: #f9f9f9;
+        padding: 20px;
+        border-radius: 5px;
+        width: 100%; /* Set width to 100% to occupy full width */
+        height: 550px;
+        margin-top: 0; /* Remove margin from the top */
+        margin-left: 0; /* Remove margin from the left */
+        margin-right: 0; /* Remove margin from the right */
+        margin-bottom: 20px; /* Add margin at the bottom */
+      }
+      .selected-destination-info {
+        visibility: collapse; /* Add some spacing between the form and selected destination */
+      }
+
+  .destinations-container1 {
+    margin-bottom: 20px;
+  }
+  /* Add this to your bookingpage.scss file */
+
+ .destination-item1 p {
+    margin: 0; /* Remove default margin */
+    font-size: 12px; /* Adjust font size */
+    color: #333; /* Adjust text color */
+    font-family: "Aboreto", system-ui;
+    font-weight: 800;
+  }
+  
+  .destinations-container1 ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex; /* Change display to flex */
+    flex-wrap: wrap; /* Allow wrapping if destinations exceed container width */
+  }
+  
+  .destinations-container1 ul li {
+    cursor: pointer;
+    margin-right: 20px; /* Add margin between destination items */
+  }
+  
+  .destination-item1 {
+    display: flex; /* Display each destination item as a flex container */
+    align-items: center; /* Center align items vertically */
+  }
+  
+  .destination-item1 img {
+    width: 362px; /* Set a fixed width for the destination images */
+    height: 271px; /* Set a fixed height for the destination images */
+    margin-top: 30px;
+    margin-right: 10px;
+    margin-bottom: 20px; /* Add some space between image and text */
+  }
+  
+  .booking-form-container1 {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    width: 1900px;
+    height: 550px;
+    margin-right: -20px;
+    margin-top: -200;
+    margin-left: 20px;
+  }
+  h9 {
+    margin-top: 0;
+    font-family: "Sacramento", cursive;
+    margin-bottom: 36px;
+    font-weight: 800;
+    font-size: 185%;
+    margin-left: 55px;
+ 
+  }
+  
+  h8 {
+    margin-top: 0;
+    font-family: "Aboreto", system-ui;
+    margin-bottom: 36px;
+    font-weight: 800;
+ 
+  }
+  
+  .booking-form-container1 form {
+    display: grid;
+    margin-top: 15px;
+    font-family: "Aboreto", system-ui;
+    gap: 10px;
+    font-weight: 800;
+  }
+  
+  .booking-form-container1 label {
+    display: grid;
+    gap: 16px;
+    font-family: "Aboreto", system-ui;
+    font-weight: 800;
+  }
+  
+  .booking-form-container1 button 
+  {
+    padding: 10px 20px;
+    margin-left: 100px;
+    margin-top: 60px;
+    width: 95px;
+    font-family: "Aboreto", system-ui;
+    background-color: #292823;
+    color: #fff;
+    border: none;
+    font-weight: 800;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .booking-form-container1 button:hover {
+    background-color: #3f3f3672;
+  }
+}  
+
+}

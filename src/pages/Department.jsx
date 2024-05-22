@@ -1,94 +1,35 @@
-import { useEffect, useState } from "react";
-import Aboutlist from "./Aboutlist";
-import "./department.scss"
-import { phamacyAbout,
-fitnessAbout,
-specialistsAbout,
-nutritionAbout,
-departmentsAbout,
-newsAbout
- } from "../data";
+import React from 'react';
+import './department.scss';
 
-export default function Department() {
-  const [selected, setSelected] = useState ("featured");
-  const [data, setData] =useState([]);
-  const list=[
-    {
-    id: "phamacy",
-    title: " Phamacy",
-    },
-    {
-      id: "fitness",
-      title: "Fitness",
-    },
-    {
-    id: "specialists",
-    title: "Specialists",
-    },
-    {
-      id: "nutrition",
-      title: "Nutrition",
-    },
-    {
-        id: "departments",
-        title: "Departments",
-    },
-    {
-          id: "news",
-          title: " News",
-    },
-  ];
-
-  useEffect (() => {
-switch(selected){
-  case "phamacy":
-    setData (phamacyAbout);
-    break;
-    case "fitness":
-      setData (fitnessAbout);
-      break;
-      case "specialists":
-        setData (specialistsAbout);
-        break;
-        case "nutrition":
-          setData (nutritionAbout);
-          break;
-          case "departments":
-            setData (departmentsAbout);
-            break;
-            case "news":
-              setData (newsAbout);
-              break;
-              default:
-                setData(phamacyAbout);
-                
-}
-  },[selected])
+const Department = () => {
   return (
-    <div className="department" id="department">
-      
-      <ul>
-    {list.map((item) => (
-      <Aboutlist title={item.title} 
-      active = {selected === item.id}
-      setSelected={setSelected}
-      id = {item.id}
-      />
-    ))}
-      </ul>
-     <div className="container">
-      {data.map((d) => (
-        <div className="item">
-        <img src={d.img}
-        alt="" />
-        <h2>{d.title}</h2>
-
-     </div>
-
-      ))}
-      
+    <div className="department">
+      <h1>Explore the world</h1>
+      <div className="blog1">
+        <div className="card">
+          <img src="pics/x3.webp" alt="Card 1" />
+          <div className="about">
+            <h2>Nature</h2>
+            <p> Immerse yourself in the serene beauty of lush forests, crystal-clear lakes, and majestic mountains.</p>
+          </div>
+        </div>
+        <div className="card">
+          <img src="pics/a3.jpg" alt="Card 2" />
+          <div className="about">
+            <h2>Culture</h2>
+            <p>Embark on a journey through vibrant cultures, where traditions are cherished, and stories are woven into the fabric of everyday life.</p>
+          </div>
+        </div>
+        <div className="card">
+          <img src="pics/pe6.jpg" alt="Card 3" />
+          <div className="about">
+            <h2>Destination</h2>
+            <p> Set your sights on a destination brimming with endless possibilities and hidden treasures waiting to be discovered.</p>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-  )
-}
+  );
+};
 
+export default Department;

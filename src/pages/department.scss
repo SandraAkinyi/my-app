@@ -1,69 +1,139 @@
-.department{
-
-    background-color: rgb(26, 42, 50);
+.department {
     display: flex;
-    height: 450px;
     flex-direction: column;
-    scroll-snap-type: y mandatory;
-    scroll-snap-align: start;
-    align-items: center;
-
-   ul{
-    margin: 32px;
-    padding: 0;
-    list-style: none;
-    display: flex;
-    color: antiquewhite;
-
-   }
-   .container{
-    width: 70%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    height: 80vh; /* Assuming you want it to take the full viewport height */
+  
+  h1 {
+    font-size: 3rem;
+    font-family: "Sacramento", cursive;
+    color: #333;
+    margin-bottom: 15px;
+    margin-top: -20px;
+    text-align: center; /* Center text */
     overflow: hidden;
 
-    .item{
-        width: 220px;
-        height: 150px;
-        border-radius: 20px;
-        border: 1px solid whitesmoke;
-        margin: 10px 20px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        columns: whitesmoke;
-        position: relative;
-        transition: all .5s ease ;
-
-        h2{
-            position: absolute;
-            font-size: 20px;
-        }
-        img{
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: 1;
-            border-radius: 20px;
-        }
-
-        &:hover{
-            background-color: aqua;
-            img{
-                opacity: 0.2;
-                z-index: 0;
-            }
-        }
-    }
- }
-    
+   
+  }
+    h1::after {
+      content: '';
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -9px;
+      width: 38%;
+      height: 2px;
+      background-color: #333; /* Change color as needed */
+  }
+  
+  
 }
-@media screen and (max-width: 600px) {
-    .department{
-        height: 769px;
-        
-    }
+.blog1 {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-left: 93px;
+    margin-right: 93px;
+    margin-top: 9px;
+  
+  .card {
+    width: 30%; /* Adjust width as needed */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ccc; /* Optional: Add border below image */
+  }
+  
+  .about {
+    padding: 20px;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    font-family: "Sacramento", cursive;
 
   }
+  p {
+    font-size: 1rem;
+    color: #666;
+  
+}
+}
+@media (min-width: 601px) and (max-width: 1281px) {
+  .department {
+    height: 67vh;
+  
+  h1 {
+    font-size: 1.5rem;
+    margin-top: 8px;
+    overflow: hidden;
+    height: 48px;
+
+  }
+    h1::after {
+      visibility: collapse;
+   
+  } 
+}
+.blog1 {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 15px;
+
+  
+  .about {
+    padding: 20px;
+  }
+  
+  h2 {
+    font-size: 1.2rem;
+  }
+  p {
+    font-size: 0.6rem;
+  
+}
+}
+}
+@media screen and (max-width: 600px) {
+  .department {
+    height: 40vh;
+  
+  h1 {
+    font-size: 1.3rem;
+    margin-top: 5px;
+    overflow:hidden;
+    height: 96px;
+
+  }
+    h1::after {
+      visibility: collapse;
+   
+  } 
+}
+.blog1 {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 5px;
+
+  
+  .about {
+    padding: 20px;
+  }
+  
+  h2 {
+    font-size: 1rem;
+  }
+  p {
+    font-size: 0.6rem;
+  
+}
+}
+
+}

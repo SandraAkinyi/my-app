@@ -1,46 +1,44 @@
 import { useState } from "react";
 import "./blog.scss";
-
 export default function Blog() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const data = [
     {
       id: "1",
-      icon: "./pics/r6.jpg",
-      title: "Nutrition",
+      icon: "./pics/r9.jpg",
+      title: "Mary",
       desc:
-        "To be recognized as a leading healthcare institution, committed to delivering exceptional medical services",
+        "As a passionate traveler who loves immersing myself in different cultures, I found this tourism website to be an invaluable resource.",
       img:
-        "./pics/r6.jpg",
+        "./pics/r9.jpg",
     },
     {
-
       id: "2",
       icon: "./pics/h2.jpg",
-      title: "fitness",
+      title: "Phillip",
       desc:
-        "To be recognized as a leading healthcare institution, committed to delivering exceptional medical services",
+        "I stumbled upon this tourism website while planning my next adventure trip, and I must say, it exceeded my expectations!",
       img:
         "./pics/h2.jpg",
     },
     {
       id: "3",
       icon: "./pics/n5.webp",
-      title: "hydration",
+      title: "Samueli",
       desc:
-        "To be recognized as a leading healthcare institution, committed to delivering exceptional medical services",
+        "Planning a family vacation can be daunting, but this tourism website made it a breeze! The family-friendly destination suggestions and activities catered to all age groups.",
       img:
         "./pics/n5.webp",
     },
     {
-        id: "4",
-        icon: "./pics/h3.jpg",
-        title: "Monthly checkup",
-        desc:
-          "To be recognized as a leading healthcare institution, committed to delivering exceptional medical services",
-        img:
-          "./pics/n5.webp",
-      },
+      id: "4",
+      icon: "./pics/pe5.jpg",
+      title: "Joana",
+      desc:
+        "This tourism website made me feel empowered and inspired to embark on solo adventures.",
+      img:
+        "./pics/pe5.webp",
+    },
   ];
 
   const handleClick = (way) => {
@@ -48,55 +46,30 @@ export default function Blog() {
       ? setCurrentSlide(currentSlide > 0 ? currentSlide - 1 : 2)
       : setCurrentSlide(currentSlide < data.length - 1 ? currentSlide + 1 : 0);
   };
-  
+
   return (
-    
     <div className="blog" id="blog">
-        
-      <div
-      
-        className="slider"
-        style={{ transform: `translateX(-${currentSlide * 100}vw)` }}
-      >
-          
+      <h4>Testimonials</h4>
+      <div className="slider" style={{ transform: `translateX(-${currentSlide * 100}vw)` }}>
         {data.map((d) => (
-        
-          <div className="container">
+          <div className="container" key={d.id}>
             <div className="item">
               <div className="left">
                 <div className="leftContainer">
-                  <div className="imgContainer">
-                    <img src="/pics/r10.jpg" alt="" />
-                  </div>
                   <h2>{d.title}</h2>
                   <p>{d.desc}</p>
-                  <div className="buttonContainer">
-            <button className="customButton">learn more</button>
-          </div>
+                  <div className="buttonContainer"></div>
                 </div>
               </div>
               <div className="right">
-                <img
-                  src={d.icon} 
-                  alt=""
-                />
+                <img src={d.icon} alt="" />
               </div>
             </div>
           </div>
         ))}
       </div>
-      <img
-        src="pics/arrow.png"
-        className="arrow left"
-        alt=""
-        onClick={() => handleClick("left")}
-      />
-      <img
-        src="pics/arrow.png"
-        className="arrow right"
-        alt=""
-        onClick={() => handleClick()}
-      />
+      <img src="pics/arrow.png" className="arrow left" alt="" onClick={() => handleClick("left")} />
+      <img src="pics/arrow.png" className="arrow right" alt="" onClick={() => handleClick()} />
     </div>
   );
 }

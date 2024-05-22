@@ -6,8 +6,9 @@ import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
 import "./app.scss";
 import { useState } from "react";
+import AboutUs from "./pages/AboutUs";
+import Booking from "./pages/Booking";
 
-;
 
 function App() {
 
@@ -22,9 +23,10 @@ function App() {
        <div className="sections">
          <Home />
          <Department />
+         <AboutUs />
+         <Booking />
          <Blog />
          <Contact />
-
        </div>
       </div>
     );

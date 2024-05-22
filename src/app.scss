@@ -4,10 +4,11 @@
 
   .sections {
     width: 100%;
-    height: calc(100vh - 70px); /* Adjusted height to consider the .topbar height */
-    background-color: lightsalmon;
+    height: calc(100vh - 58px); /* Adjusted height to consider the .topbar height */
+    background-color: rgb(245, 243, 240);
     position: relative;
-    top: 70px; /* Adjusted top position to start below the .topbar */
+    top: 58px; /* Adjusted top position to start below the .topbar */
+    
   }
 
 }
